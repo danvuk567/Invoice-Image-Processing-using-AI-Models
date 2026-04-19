@@ -111,8 +111,7 @@ def render_model_description(info: dict, provider: str) -> None:
 def load_css(css_path: str) -> None:
     """Inject a local CSS stylesheet into the Streamlit app."""
     with open(css_path, "r") as f:
-        css = f.read()
-    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
 def on_image_delete() -> None:
@@ -486,6 +485,7 @@ init_session_state()
 
 # 3. Load Model Data (JSON)
 models_data = load_models("models.json")
+models_data2 = load_models("models2.json")
 
 st.markdown(f"""
     <div style="display: flex; align-items: center;">
@@ -581,7 +581,7 @@ with st.sidebar:
     st.header("Expense Analysis AI Model")
 
     # 2. MODEL #2 MODEL & CREDENTIAL INITIALIZATION
-    prov_2, mod_2 = model_selector("2", models_data)
+    prov_2, mod_2 = model_selector("2", models_data2)
 
     if mod_2 and mod_2 != "Select Model...":
         key_2 = api_key_handler("2", prov_2)
@@ -612,8 +612,8 @@ with st.sidebar:
 
 # CHAT INTERFACE CONTAINER
 with st.container(height=400, border=True):
-
-    st.markdown('<div id="chat-viewport">', unsafe_allow_html=True)
+    
+    #st.markdown('<div id="chat-viewport"></div>', unsafe_allow_html=True)
 
     # TRIGGER INFERENCE (Flow Orchestration Logic)
     if st.session_state.messages and st.session_state.messages[-1]["role"] == "user":
@@ -636,7 +636,6 @@ with st.container(height=400, border=True):
                     )
 
                 if full_res:
-                    #st.write(full_res)
 
                     if st.session_state.extraction_stage:
                         name_tag = "extraction_result"
@@ -684,14 +683,11 @@ with st.container(height=400, border=True):
             # Rerun to move the "Present" message into the "Past" container
             st.rerun()
 
-        # 4. UTILITIES
-        st.button("🗑️ Clear AI Model Chat", 
-                key="btn_clear_1", 
-                use_container_width=True, 
-                on_click=clear_chat_callback)
-
-        st.markdown('</div>', unsafe_allow_html=True)
-
+# 4. UTILITIES
+st.button("🗑️ Clear AI Model Chat", 
+        key="btn_clear_1", 
+        use_container_width=True, 
+        on_click=clear_chat_callback)
 
 # GLOBAL RERUN HANDLER
 # This block is essential for the 'Streamlit Flow'. Because we appended messages 
