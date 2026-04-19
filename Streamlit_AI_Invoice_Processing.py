@@ -612,10 +612,8 @@ with st.sidebar:
 
 # CHAT INTERFACE CONTAINER
 with st.container(height=400, border=True):
-    # --- Render existing chat history ---
-    #for msg in st.session_state.messages:
-        #with st.chat_message(msg["role"]):
-            #st.markdown(msg["content"])
+
+    st.markdown('<div id="chat-viewport">', unsafe_allow_html=True)
 
     # TRIGGER INFERENCE (Flow Orchestration Logic)
     if st.session_state.messages and st.session_state.messages[-1]["role"] == "user":
@@ -691,6 +689,8 @@ with st.container(height=400, border=True):
                 key="btn_clear_1", 
                 use_container_width=True, 
                 on_click=clear_chat_callback)
+
+        st.markdown('</div>', unsafe_allow_html=True)
 
 
 # GLOBAL RERUN HANDLER
