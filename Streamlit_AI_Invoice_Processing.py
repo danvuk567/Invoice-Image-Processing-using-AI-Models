@@ -638,7 +638,7 @@ with st.container(height=400, border=True):
                     )
 
                 if full_res:
-                    st.write(full_res)
+                    #st.write(full_res)
 
                     if st.session_state.extraction_stage:
                         name_tag = "extraction_result"
@@ -652,7 +652,7 @@ with st.container(height=400, border=True):
                     st.session_state.image_analysis_stage = True
                     
                     # Now rerun safely
-                    #st.rerun()
+                    st.rerun()
 
     if st.session_state.image_analysis_stage:
         # 1. THE PAST (Always at the top of the block)
