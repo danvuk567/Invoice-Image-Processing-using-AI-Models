@@ -1,7 +1,7 @@
 import streamlit as st
 import uuid
 import json
-from src.agents_new import Agent
+from src.agents import Agent
 from src.flow_new import Flow
 from src.image_uploader import ImageUploader
 
