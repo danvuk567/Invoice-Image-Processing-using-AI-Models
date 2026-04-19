@@ -1,7 +1,13 @@
+# --- PROJECT ASSETS (Optional) ---
+# If you store the 287 images locally in a 'data' folder, ignore it.
+# Large datasets should be stored in the cloud (S3, GCS) or referenced via URL.
+data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
