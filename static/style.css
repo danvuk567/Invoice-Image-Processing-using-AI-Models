@@ -22,6 +22,17 @@ div[data-testid="stContainer"] {
     background-color: #111111;
 }
 
+/* Targets the specific wrapper that Streamlit uses when 'border=True' is set */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    border: 1px solid #ffffff !important;
+    border-radius: 0.5rem;
+}
+
+/* If you want to keep the background you already set */
+div[data-testid="stVerticalBlockBorderWrapper"] > div {
+    background-color: #111111;
+}
+
 div[data-testid="stSelectbox"] label p {
     color: #f0f0f0; /* Very light gray, almost white */
     font-weight: 400; /* Normal weight, change to 600 for bold */
