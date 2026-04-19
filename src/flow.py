@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
-from src.agents import AgentState
+from src.agents import InvoiceState
 
 class Flow:
     def __init__(self, agents: list, memory: bool = False):
@@ -14,7 +14,7 @@ class Flow:
             
         self.graph = self._build_graph()
 
-    def _route_start(self, state: AgentState) -> str:
+    def _route_start(self, state: InvoiceState) -> str:
         """
         Private routing logic to decide the entry point.
         """
@@ -31,7 +31,7 @@ class Flow:
         return "agent_1"
 
     def _build_graph(self):
-        graph_builder = StateGraph(AgentState)
+        graph_builder = StateGraph(InvoiceState)
         node_names = []
 
         for i, agent in enumerate(self.agents):
