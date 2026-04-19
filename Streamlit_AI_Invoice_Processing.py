@@ -611,7 +611,7 @@ with st.sidebar:
 # =============================================================================
 
 # CHAT INTERFACE CONTAINER
-with st.container(height=500, border=True):
+with st.container(height=400, border=True):
     # --- Render existing chat history ---
     #for msg in st.session_state.messages:
         #with st.chat_message(msg["role"]):
@@ -656,11 +656,11 @@ with st.container(height=500, border=True):
 
     if st.session_state.image_analysis_stage:
         # 1. THE PAST (Always at the top of the block)
-        with st.container(height=300, border=True):
-            for i, msg in enumerate(st.session_state.messages):
-                if i < 1: continue # Hide the setup context
-                with st.chat_message(msg["role"]):
-                    st.markdown(msg["content"])
+        #with st.container(height=300, border=True):
+        for i, msg in enumerate(st.session_state.messages):
+            if i < 1: continue # Hide the setup context
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
 
         # 2. THE PRESENT (The Input Box)
         # Note: st.chat_input naturally "pins" to the bottom of the screen
