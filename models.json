@@ -72,7 +72,7 @@
   "HuggingFace": {
     "Qwen/Qwen2.5-VL-72B-Instruct": {
       "Company": "Alibaba",
-      "Input": 0,
+      "Input": 0.04,
       "Output": 4.00,
       "Description": "Alibaba's flagship 72B vision-language model designed for expert-level multimodal analysis. It features elite performance in document parsing, chart-to-JSON extraction, and long-form video understanding (1hr+). With enhanced 'Agentic' capabilities, it can autonomously navigate complex GUIs and mobile interfaces, making it ideal for high-precision retail automation and strategic data mining."
     },

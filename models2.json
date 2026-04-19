@@ -1,0 +1,136 @@
+{
+  "OpenAI": {
+    "gpt-4.1-nano": {
+      "Company": "OpenAI",
+      "Input": 0.05,
+      "Output": 0.20,
+      "Description": "Fastest and cheapest OpenAI GPT model. Ideal for simple extraction tasks like classification."
+    },
+    "gpt-4o-mini": {
+      "Company": "OpenAI",
+      "Input": 0.15,
+      "Output": 0.60,
+      "Description": "Highly affordable and fast OpenAI model optimized for high-volume text and structured data tasks with multimodal capabilities."
+    },
+    "gpt-5.4-nano": {
+      "Company": "OpenAI",
+      "Input": 0.20,
+      "Output": 1.25,
+      "Description": "Smallest OpenAI GPT-5 model. Best for high-volume, simple extraction at low cost."
+    },
+    "gpt-5.4-mini": {
+      "Company": "OpenAI",
+      "Input": 0.75,
+      "Output": 4.50,
+      "Description": "Fast, capable, strong OpenAI GPT model that has multimodal understanding at mid-range cost."
+    }
+  },
+  "Google": {
+    "gemini-2.5-flash-lite": {
+      "Company": "Google",
+      "Input": 0.10,
+      "Output": 0.40,
+      "Description": "The smallest and most cost effective Google AI model, built for at scale usage."
+    },
+    "gemini-2.5-flash": {
+      "Company": "Google",
+      "Input": 0.30,
+      "Output": 2.50,
+      "Description": "A hybrid reasoning Google AI model which supports a 1M token context window and has thinking budgets."
+    },
+    "gemini-3-flash-preview": {
+      "Company": "Google",
+      "Input": 0.50,
+      "Output": 3.00,
+      "Description": "An intelligent Google AI model built for speed, combining frontier intelligence with superior search and grounding."
+    }
+  },
+  "HuggingFace": {
+    "Qwen/Qwen2.5-Coder-32B-Instruct": {
+      "Company": "Alibaba",
+      "Input": 0.06,
+      "Output": 0.20,
+      "Description": "The 'Systems Analyst' choice. Specifically trained on code and logic. This model is much less likely to make rounding errors or break JSON syntax compared to general models."
+    },
+    "Qwen/Qwen2.5-VL-72B-Instruct": {
+      "Company": "Alibaba",
+      "Input": 0.04,
+      "Output": 4.00,
+      "Description": "Alibaba's flagship 72B vision-language model designed for expert-level multimodal analysis. It features elite performance in document parsing, chart-to-JSON extraction, and long-form video understanding (1hr+). With enhanced 'Agentic' capabilities, it can autonomously navigate complex GUIs and mobile interfaces, making it ideal for high-precision retail automation and strategic data mining."
+    },
+    "Qwen/Qwen3.5-Flash": {
+      "Company": "Alibaba",
+      "Input": 0.03,
+      "Output": 0.12,
+      "Description": "2026's efficiency leader. Uses a native hybrid architecture to provide near-instant response times for text-based calculations and massive 1M token context support."
+    },
+    "Qwen/Qwen3-VL-8B-Thinking": {
+      "Company": "Alibaba",
+      "Input": 0.12,
+      "Output": 1.36,
+      "Description": "A 'Reasoning' model that shows its work. It will double-check its math logic internally before outputting the final JSON, making it ideal for invoices with complex tax rules."
+    },
+    "meta-llama/Llama-4-Scout-17B": {
+      "Company": "Meta",
+      "Input": 0.08,
+      "Output": 0.30,
+      "Description": "The efficiency king of the Llama 4 family. A 17B Mixture-of-Experts (MoE) model that punches like a 70B. Incredible at following strict JSON schemas for invoice processing."
+    },
+    "meta-llama/Llama-4-Maverick-109B": {
+      "Company": "Meta",
+      "Input": 0.15,
+      "Output": 0.60,
+      "Description": "A heavy-duty reasoning model with a 1M token context window. Ideal for batch-processing hundreds of invoice JSONs in a single pass with high mathematical precision."
+    },
+    "meta-llama/Llama-3.3-70B-Instruct": {
+      "Company": "Meta",
+      "Input": 0.10,
+      "Output": 0.32,
+      "Description": "A battle-tested legacy model from late 2024/2025. Extremely reliable for basic text calculations and stable JSON formatting."
+    },
+    "meta-llama/Llama-4-8B-Nano": {
+      "Company": "Meta",
+      "Input": 0.02,
+      "Output": 0.05,
+      "Description": "The cheapest Llama 4 option. Best for simple line-item summing and basic data cleanup where latency must be near-zero."
+    },
+    "mistral-nemo-12b": {
+      "Company": "Mistral",
+      "Input": 0.02,
+      "Output": 0.02,
+      "Description": "An open-weight model with the lowest blended cost. Excellent for basic data formatting and summaries."
+    },
+    "microsoft/phi-4": {
+      "Company": "Microsoft",
+      "Input": 0.07,
+      "Output": 0.14,
+      "Description": "A 14B parameter model specializing in complex reasoning and math. Ideal for precise invoice calculations and structured JSON data processing."
+    }
+  },
+  "Groq": {
+    "qwen/Qwen3-Coder-32B": {
+      "Company": "Alibaba",
+      "Input": 0.29,
+      "Output": 0.59,
+      "Description": "Specialized for code and logic. The best model on Groq for ensuring your JSON structure remains perfectly valid while handling complex tax and discount calculations."
+    },
+    "meta-llama/Llama-4-8B-Nano": {
+      "Company": "Meta",
+      "Input": 0.05,
+      "Output": 0.08,
+      "Description": "The fastest model available. Best for simple line-item summing where speed is the primary requirement. Processes virtually instantly."
+    },
+    "meta-llama/Llama-4-Scout-17B": {
+      "Company": "Meta",
+      "Input": 0.11,
+      "Output": 0.34,
+      "Description": "The efficiency king on Groq's LPU. A 17B model that processes at 500+ tokens/sec. Exceptional at following strict JSON schemas and validating arithmetic for high-volume invoice batches."
+    },
+    "mistral-ai/Mixtral-8x7B-32k": {
+      "Company": "Mistral",
+      "Input": 0.27,
+      "Output": 0.27,
+      "Description": "The 'Value' workhorse. Uses a Mixture-of-Experts (MoE) architecture to provide reliable reasoning at a flat, low rate. Excellent for long-form JSON extraction."
+    }
+  }
+}
